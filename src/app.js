@@ -7,10 +7,13 @@ import SearchParams from "./SearchParams";
 //Anytime App() is called, its going to "stamp" a div and an h1 with the tag "adopt Me"
 const App = () => {
   return (
-    <div>
-      <h1 id="something-important">Adopt Me!</h1>
-      <SearchParams />
-    </div>
+    //strictmode forces you to use code not schedules for deprecation.
+    <React.StrictMode>
+      <div>
+        <h1 id="something-important">Adopt Me!</h1>
+        <SearchParams />
+      </div>
+    </React.StrictMode>
   );
 };
 
