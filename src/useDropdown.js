@@ -1,4 +1,4 @@
-import React, { useStat } from "react";
+import React, { useState } from "react";
 
 const useDropdown = (label, defaultState, options) => {
   const [state, setState] = useState(defaultState);
@@ -9,12 +9,12 @@ const useDropdown = (label, defaultState, options) => {
       <select
         id={id}
         value={state}
-        onChange= {e => setState(e.target.value)}
-        onBlur= {e => setState(e.target.value)}
-        disabled= {options.length === 0}
+        onChange={(e) => setState(e.target.value)}
+        onBlur={(e) => setState(e.target.value)}
+        disabled={options.length === 0}
       >
         <option>All</option>
-        {options.map((item => (
+        {options.map((item) => (
           <option key={item} value={item}>
             {item}
           </option>
@@ -22,4 +22,7 @@ const useDropdown = (label, defaultState, options) => {
       </select>
     </label>
   );
+  return [state, Dropdown, setState];
 };
+
+export default useDropdown;

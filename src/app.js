@@ -6,32 +6,6 @@ import SearchParams from "./SearchParams";
 
 //Anytime App() is called, its going to "stamp" a div and an h1 with the tag "adopt Me"
 const App = () => {
-  // return React.createElement(
-  //   //1st param is what kind of element it is
-  //   "div",
-  //   //2nd param is for what type of attributes there are eg. id="thisId"
-  //   { id: "something-important" },
-  //   [
-  //     //3rd param is for what children there are, you can use an array [] for multiple children (div can have 15 children) but it isnt required
-  //     React.createElement("h1", {}, "Adopt Me!"),
-  //     React.createElement(Pet, {
-  //       name: "Luna",
-  //       animal: "Dog",
-  //       breed: "havanese",
-  //     }),
-  //     React.createElement(Pet, {
-  //       name: "Pepper",
-  //       animal: "Bird",
-  //       breed: "Cockatiel",
-  //     }),
-  //     React.createElement(Pet, {
-  //       name: "sunshine",
-  //       animal: "Pig",
-  //       breed: "Big Ol' Boy",
-  //     }),
-  //   ]
-  // );
-
   return (
     <div>
       <h1 id="something-important">Adopt Me!</h1>
