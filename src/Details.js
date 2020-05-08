@@ -19,7 +19,6 @@ class Details extends React.Component {
   //     };
   //   }
   componentDidMount() {
-    throw new Error("lol");
     //this.props is immutable info coming from the parent
     pet.animal(this.props.id).then(({ animal }) => {
       //this.setState will update the above this.state loading: true
