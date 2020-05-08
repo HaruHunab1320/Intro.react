@@ -1,6 +1,7 @@
 import React from "react";
 import pet from "@frontendmasters/pet";
 import Carousel from "./Carousel";
+import ErrorBoundary from "./ErrorBoundary";
 
 class Details extends React.Component {
   //this takes place of the constructor below this. We had to access the babel config to allow this
@@ -18,6 +19,7 @@ class Details extends React.Component {
   //     };
   //   }
   componentDidMount() {
+    throw new Error("lol");
     //this.props is immutable info coming from the parent
     pet.animal(this.props.id).then(({ animal }) => {
       //this.setState will update the above this.state loading: true
@@ -54,4 +56,12 @@ class Details extends React.Component {
   }
 }
 
-export default Details;
+export default function DetailsWithErrorBoundary(props) {
+  return (
+    //ErrorBoundary only catches errors that are contained within it. it doesnt care about {...props}.
+    //Spread: {...props} is the same as saying id={props.id}. If you had multiple values, it would essentially take care of all this for you.
+    <ErrorBoundary>
+      <Details {...props} />
+    </ErrorBoundary>
+  );
+}
