@@ -1,6 +1,8 @@
 //this is mostly code from reactjs.org/docs/error-coundaries.html
 
 //This code will catch any errors coming from the API or 3rd party end of things and will create a  link to return to home and redirect to home
+
+//Error boundary does not work with hooks as there is no equivilent to methods like componentDidCatch(life cycle methods), But because this returns this.props.children doesnt care what its children are, you can wrap the error boundary around other components that use hooks.
 import React, { Component } from "react";
 import { Link, Redirect } from "@reach/router";
 
