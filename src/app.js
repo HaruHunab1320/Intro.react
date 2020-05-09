@@ -5,6 +5,11 @@ import { Router } from "@reach/router";
 
 import SearchParams from "./SearchParams";
 import ThemeContext from "./ThemeContext";
+import _ from "lodash";
+import moment from "moment";
+
+console.log(_, moment);
+
 import NavBar from "./NavBar";
 //CODE SPLITTING: if your going to code split, you should be splitting at least 30kb otherwise its not worth it
 

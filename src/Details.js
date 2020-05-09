@@ -1,10 +1,15 @@
-import React from "react";
+import React, { lazy } from "react";
 import pet from "@frontendmasters/pet";
 import { navigate } from "@reach/router";
-import Modal from "./Modal";
+
 import Carousel from "./Carousel";
 import ErrorBoundary from "./ErrorBoundary";
 import ThemeContext from "./ThemeContext";
+import _ from "lodash";
+import moment from "moment";
+
+const Modal = lazy(() => import("./Modal"));
+console.log(_, moment);
 
 //Details is a class so we cannot use any hooks. To use context with classes we need to build a react component within <ThemeContext.Consumer
 class Details extends React.Component {
