@@ -5,6 +5,10 @@ import useDropdown from "./useDropdown";
 import ThemeContext from "./ThemeContext";
 
 const SearchParams = () => {
+  //These are called "Hooks", the first position in the hook is the initial default state eg. "[location, ]", the seconds is an updater function.
+  //Hooks are stateful containers so the default will only be rendered on the initial default state.
+  //You can have as many hooks in a function as we want, as we can have many states available for that function
+  //Hooks cannot be inside of conditional or loop statements as the useState must be called in the correct order every time.
   const [location, setLocation] = useState("Seattle, WA");
   const [breeds, setBreeds] = useState([]);
   const [animal, AnimalDropdown] = useDropdown("Animal", "dog", ANIMALS);
